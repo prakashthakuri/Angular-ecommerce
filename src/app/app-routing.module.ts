@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'', redirectTo:'/listing', pathMatch:'full'},
 
   {  path:'listings', component: ListingPageComponent, pathMatch: 'full'},
-  {  path:'listing/:id', component: ListingDetailPageComponent},
+  {  path:'listings/:id', component: ListingDetailPageComponent},
   {  path:'contact/:id', component:ContactPageComponent},
   {  path:'edit-listing/:id', component: EditListingPageComponent},
   {  path: 'my-listing', component: MyListingPageComponent},
