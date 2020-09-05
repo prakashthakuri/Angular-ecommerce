@@ -26,7 +26,7 @@ export class ListingDataFormComponent implements OnInit {
   onButtonClick(): void {
     
     //this allows parent component to use parenthesis syntax in html tag, whenever it calls
-    
+
     this.onSubmit.emit({
       id:null,
       name: this.name,
