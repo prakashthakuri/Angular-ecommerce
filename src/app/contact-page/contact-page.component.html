@@ -1,1 +1,22 @@
-<p>contact-page works!</p>
+
+<div class="content-box">
+    <h3>Send this owner a Message</h3>
+    <div>
+        <label>
+            Your email address: <input name="email" [(ngModel)] = 'email' /> 
+            <!-- //[(ngModel)] does the two way data binding and we need to import formsmodule at app.module.ts -->
+        </label>
+    </div>
+    <div>
+        <label>
+            Your Message:
+            <textarea
+            name="message"
+            rows="5"
+            cols="20"
+            [(ngModel)]= "message" ></textarea>
+        </label>
+    </div>
+    <button (click) = "sendMessage()">Send</button> 
+    <!-- calling the sendMessage function -->
+</div>
