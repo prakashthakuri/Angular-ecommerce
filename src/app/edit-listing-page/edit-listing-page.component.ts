@@ -1,4 +1,7 @@
-import { Router } from '@angular/router';
+import { Listing } from './../types';
+import { fakeMyListings } from './../fake-data';
+import { ListingDataFormComponent } from './../listing-data-form/listing-data-form.component';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,13 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-listing-page.component.css'],
 })
 export class EditListingPageComponent implements OnInit {
+  listing: Listing
+  
   name: string = '';
   description: string = '';
   price: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+              private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.listing = fakeMyListings.find(listing => listing.id ===id )
+  }
 
   onSubmit(): void {
     alert('Sving Changes to the Listing...');
