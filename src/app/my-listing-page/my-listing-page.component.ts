@@ -8,15 +8,15 @@ import { Listing } from '../types';
   styleUrls: ['./my-listing-page.component.css'],
 })
 export class MyListingPageComponent implements OnInit {
-  listings: Listing[] = []
+  listings: Listing[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-
-    this.listings = fakeMyListings
+    this.listings = fakeMyListings;
   }
-  onDeletedClicked(listingId: string):void { //alert only
-    alert(`Your listing is deleted`)
+  onDeletedClicked(listingId: string): void {
+    //alert only
+    alert(`Your listing is deleted`);
   }
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
   {  path:'contact/:id', component:ContactPageComponent},
   {  path:'edit-listing/:id', component: EditListingPageComponent},
   {  path: 'my-listing', component: MyListingPageComponent},
-  {  path: 'new-listing', component: NewListingPageComponent}
+  {  path: 'new-listing', component: NewListingPageComponent},
 ]; // Add every Routes
 
 @NgModule({
