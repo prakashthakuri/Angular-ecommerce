@@ -1,2 +1,3 @@
 # Angular-ecommerce
-linklearning
+
+E-commerce website with Angular and NodeJS
