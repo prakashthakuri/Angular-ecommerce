@@ -4,8 +4,8 @@ import mysql from 'mysql'
 
 const connection = mysql.createConnection( {
     host: 'localhost',
-    user: 'prakash-server',
-    password: 'prakash',
+    user: 'newuser',
+    password: 'newuser@1234',
     database: 'ecommerce-angular',
 })
 
