@@ -13,10 +13,10 @@ export class ListingPageComponent implements OnInit {
 
 
 
-  constructor(private listingsService: ListingsService,) { }
+  constructor(private listingsService: ListingsService) { }
 
   ngOnInit(): void {
-    this.listings = this.listingsService.getListing()
+    this.listingsService.getListing().subscribe(listings => this.listings = listings);
   }
 
 }
