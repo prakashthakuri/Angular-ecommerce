@@ -1,3 +1,4 @@
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 // import { fakeListings } from './fake-data';
 import { Listing } from './types';
 import { Injectable } from '@angular/core';
@@ -27,7 +28,34 @@ export class ListingsService {
 
   }
 
+
+
   addViewToListing(id: string): Observable<Listing> {
-    return this.http.post<Listing>(`/api/listings/${id}/add-view`, {}, httpOptions );
+    return this.http.post<Listing>(`/api/listings/${id}/add-view`,
+    {},
+    httpOptions );
   }
+
+  getListingForUser(): Observable<Listing> {
+    return this.http.get<Listing>(`/api/users/12345`);
+  }
+
+  deleteListing(id:string): Observable<any> {
+    return this.http.delete(`/api/listings/${id}`);
+  }
+  createListing(name: string, description: string, price: number): Observable<Listing> {
+    return this.http.post<Listing>(
+      '/api/listings',
+      {name, description, price},
+      httpOptions
+    );
+  }
+  editListing(id:string, name:string, description: string, price: number): Observable<Listing> {
+    return this.http.post<Listing>(
+      `api/listings/${id}`,
+      {name, description, price},
+      httpOptions,
+    );
+  }
+
 }
